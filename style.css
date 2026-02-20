@@ -1,4 +1,4 @@
- /* ============================================================
+/* ============================================================
    PORTFOLIO — NAMBINITSOA Tsiky Fanantenana
    Fichier : style.css
    Couleurs dominantes : Rouge #E31C25 + Bleu marine/ciel
@@ -617,7 +617,8 @@ section { padding: 6rem 5rem; position: relative; }
 
 .school-img-wrap {
   width: 100%;
-  height: 180px;
+  height: 200px;
+  max-height: 200px;
   overflow: hidden;
   background: linear-gradient(135deg, var(--navy), var(--card));
   display: flex;
@@ -628,8 +629,10 @@ section { padding: 6rem 5rem; position: relative; }
 
 .school-img-wrap img {
   width: 100%;
-  height: 100%;
+  height: 200px;
+  max-height: 200px;
   object-fit: cover;
+  object-position: center center;
   display: block;
   transition: transform 0.4s;
 }
