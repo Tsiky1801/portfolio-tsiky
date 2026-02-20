@@ -3,7 +3,7 @@
    Fichier : script.js
    ============================================================ */
 
-// ── DONNÉES — MODIFIEZ ICI ───────────────────────────────
+// ── DONNÉES — MODIFIEZ ICI ────────────────────────────────────
 
 const PROFILE = {
   nom: "NAMBINITSOA Tsiky Fanantenana",
@@ -151,34 +151,35 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 // ── RENDU PROFIL (photo) ──────────────────────────────────────
+//
+// COMMENT AJOUTER VOTRE PHOTO DEPUIS GITHUB :
+// 1. Allez sur un de vos dépôts GitHub (ex: Tsiky1801/reimagined-enigma)
+// 2. Uploadez votre photo (ex: profil.jpg) dans ce dépôt
+// 3. Ouvrez le fichier sur GitHub, cliquez "Raw", copiez l'URL
+//    Ex: https://raw.githubusercontent.com/Tsiky1801/reimagined-enigma/main/profil.jpg
+// 4. Collez cette URL dans PROFILE.photoProfile en haut de ce fichier
+//
+// EXEMPLE :
+// photoProfile: "https://raw.githubusercontent.com/Tsiky1801/reimagined-enigma/main/profil.jpg",
+// photoEcole:   "https://raw.githubusercontent.com/Tsiky1801/reimagined-enigma/main/emit.jpg",
 
 function renderProfile() {
+  // ── Photo de profil ──
   const imgWrap = document.getElementById("profile-img-wrap");
-  if (!imgWrap) return;
-
-  if (PROFILE.photoProfile) {
-    imgWrap.innerHTML = `<img src="${PROFILE.photoProfile}" alt="Photo de ${PROFILE.nom}" />`;
-  } else {
-    imgWrap.innerHTML = `
-      <div class="profile-placeholder">
-        <span class="ph-icon">🧑‍💻</span>
-        <p>Ajoutez votre photo</p>
-        <small>PROFILE.photoProfile</small>
-      </div>`;
+  if (imgWrap && PROFILE.photoProfile) {
+    imgWrap.innerHTML = '<img src="' + PROFILE.photoProfile + '" alt="Photo de ' + PROFILE.nom + '" '
+      + 'onerror="this.parentElement.innerHTML=\'<div class=\"profile-placeholder\"><span class=\"ph-icon\">🧑\u200d💻</span><p>Photo introuvable — vérifiez le lien GitHub</p></div>\'" />';
   }
 
+  // ── Photo de l'école ──
   const schoolWrap = document.getElementById("school-img-wrap");
   if (!schoolWrap) return;
 
   if (PROFILE.photoEcole) {
-    schoolWrap.innerHTML = `<img src="${PROFILE.photoEcole}" alt="EMIT Fianarantsoa" />`;
+    schoolWrap.innerHTML = '<img src="' + PROFILE.photoEcole + '" alt="EMIT Fianarantsoa" '
+      + 'onerror="this.parentElement.innerHTML=\'<div class=\"school-img-placeholder\"><span>🏫</span><p>Photo EMIT introuvable</p></div>\'" />';
   } else {
-    schoolWrap.innerHTML = `
-      <div class="school-img-placeholder">
-        <span>🏫</span>
-        <p>Photo de l'EMIT</p>
-        <small>PROFILE.photoEcole</small>
-      </div>`;
+    schoolWrap.innerHTML = '<div class="school-img-placeholder"><span>🏫</span><p>EMIT Fianarantsoa</p><small>Ajoutez PROFILE.photoEcole dans script.js</small></div>';
   }
 }
 
