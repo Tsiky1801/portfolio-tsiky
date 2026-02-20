@@ -1,86 +1,359 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio - L1 Informatique</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Portfolio de NAMBINITSOA Tsiky Fanantenana — Développeur Web Junior, Étudiant L1 DA2I à l'EMIT Fianarantsoa" />
+  <meta name="author" content="NAMBINITSOA Tsiky Fanantenana" />
+  <title>NAMBINITSOA Tsiky Fanantenana — Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-<header>
-    <nav>
-        <h2 class="logo">MonPortfolio</h2>
-        <ul>
-            <li><a href="#accueil">Accueil</a></li>
-            <li><a href="#apropos">À propos</a></li>
-            <li><a href="#projets">Projets</a></li>
-            <li><a href="#localisation">Localisation</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
-</header>
+<!-- ═══════════════ CURSOR ═══════════════════════════════════ -->
+<div class="cursor" id="cursor"></div>
+<div class="cursor-ring" id="cursor-ring"></div>
 
-<section id="accueil" class="section hero">
-    <div class="content">
-        <div class="text">
-            <h1 class="section-title">Bienvenue sur mon Portfolio</h1>
-            <p>Je suis étudiant en L1 Informatique passionné par le développement web et la programmation.</p>
-        </div>
+<!-- ═══════════════ NAVIGATION ══════════════════════════════ -->
+<nav>
+  <a href="#hero" class="nav-logo">NAMBS<span>.</span>dev</a>
+  <ul>
+    <li><a href="#hero">Accueil</a></li>
+    <li><a href="#about">À propos</a></li>
+    <li><a href="#skills">Compétences</a></li>
+    <li><a href="#projects">Projets</a></li>
+    <li><a href="#contact">Contact</a></li>
+    <!--
+      Pour activer le téléchargement du CV :
+      1. Placez votre fichier CV dans le dossier (ex: cv.pdf)
+      2. Remplacez "#" par "cv.pdf" et décommentez download
+    -->
+    <li><a href="tsiky.pdf" class="nav-cv-btn" id="cv-download-btn">⬇ Télécharger CV</a></li>
+  </ul>
+  <button class="hamburger" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
 
-        <div class="profile-container">
-            <img src="https://via.placeholder.com/300" alt="Photo Profil" class="profile-img">
-            <h2 class="profile-name">NAMBININTSOA Tsiky Fanantenana</h2>
-        </div>
+<!-- ═══════════════ HERO ══════════════════════════════════ -->
+<section id="hero">
+
+  <!-- Gauche : texte -->
+  <div class="hero-left">
+    <div class="hero-badge">
+      <div class="badge-dot"></div>
+      Étudiant raisonable &amp; amoureux
     </div>
-</section>
 
-<section id="apropos" class="section">
-    <h1 class="section-title">À Propos</h1>
-    <p>
-        Je suis étudiant en première année d'informatique.
-        J'aime créer des sites web modernes et apprendre de nouvelles technologies
-        comme HTML, CSS, JavaScript et Python.
+    <p class="hero-greeting">Bonjour, je suis</p>
+
+    <h1 class="hero-name">
+      <span class="highlight">NAMBINITSOA</span><br>
+      Tsiky Fanantenana
+    </h1>
+
+    <p class="hero-role"> Développeur Web Junior</p>
+
+    <p class="hero-school">
+      <strong>EMIT — Université de Fianarantsoa</strong> &nbsp;|&nbsp;
+      L1 Informatique · DA2I
     </p>
-</section>
 
-<section id="projets" class="section">
-    <h1 class="section-title">Mes Projets</h1>
+    <p class="hero-desc">
+      Étudiant de 19 ans, <strong>passionné et sérieux</strong>, je consacre ma
+      formation à maîtriser le développement web et les fondamentaux de l'informatique.
+      Chaque ligne de code est un pas vers mon objectif : devenir un développeur
+      complet et contribuer au numérique à Madagascar.
+    </p>
 
-    <div class="projects">
-        <div class="card">
-            <h3>Projet 1</h3>
-            <p>Mini site web responsive réalisé en HTML/CSS.</p>
-        </div>
-
-        <div class="card">
-            <h3>Projet 2</h3>
-            <p>Application JavaScript interactive.</p>
-        </div>
-
-        <div class="card">
-            <h3>Projet 3</h3>
-            <p>Programme en Python pour gestion de données.</p>
-        </div>
+    <div class="hero-btns">
+      <a href="#projects" class="btn-primary"> Voir mes projets</a>
+      <a href="#contact" class="btn-secondary">💬 Me contacter</a>
     </div>
+
+    <!-- Liens sociaux -->
+    <div class="hero-socials">
+      <a href="https://github.com/Tsiky1801" class="social-link" target="_blank" rel="noopener">
+        <!-- GitHub icon -->
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+        </svg>
+        GitHub @Tsiky1801
+      </a>
+      <a href="https://facebook.com/NAMBINTSOA-Tsiky-Fanantenana" class="social-link" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+        </svg>
+        Facebook
+      </a>
+    </div>
+  </div>
+
+  <!-- Droite : photo de profil animée -->
+  <div class="hero-right">
+    <div class="profile-container">
+      <div class="profile-deco"></div>
+      <div class="ring-outer"></div>
+      <div class="ring-mid"></div>
+      <div class="ring-inner"></div>
+
+      <!-- La photo est injectée ici via script.js -->
+      <div class="photo.jpg" id="photo.jpg"></div>
+
+      <div class="profile-badge">Dev Web Junior depuis le 2026</div>
+    </div>
+  </div>
+
 </section>
 
-<section id="localisation" class="section">
-    <h1 class="section-title">Localisation</h1>
-    <p>📍 Je suis basé à [Votre Ville], [Votre Pays].</p>
+<!-- ═══════════════ À PROPOS ══════════════════════════════ -->
+<section id="about">
+  <div class="section-header reveal">
+    <div class="section-label">01 — À propos</div>
+    <h2 class="section-title">Qui suis-je <span>?</span></h2>
+    <span class="section-line"></span>
+  </div>
+
+  <div class="about-grid">
+
+    <!-- Colonne gauche : photo école + stats -->
+    <div class="about-photo-col">
+
+      <!-- Photo de l'école -->
+      <div class="about-school-card reveal">
+        <div class="EMIT.jpg" id="school-EMIT.jpg">
+          <!-- Injecté par script.js -->
+        </div>
+        <div class="school-info-bar">
+          <div class="school-name">EMIT — École de Management et d'Innovation Technologique</div>
+          <div class="school-detail">
+            <strong>Université de Fianarantsoa</strong><br>
+            Filière : Informatique · DA2I &nbsp;|&nbsp; Niveau : L1<br>
+            Fianarantsoa, Madagascar
+          </div>
+        </div>
+      </div>
+
+      <!-- Stats -->
+      <div class="about-stats reveal">
+        <div class="stat-box">
+          <span class="stat-num" data-target="10">0</span>
+          <div class="stat-label">Compétences</div>
+        </div>
+        <div class="stat-box">
+          <span class="stat-num" data-target="3">0</span>
+          <div class="stat-label">Projets</div>
+        </div>
+        <div class="stat-box">
+          <span class="stat-num" data-target="19">0</span>
+          <div class="stat-label">Ans</div>
+        </div>
+        <div class="stat-box">
+          <span class="stat-num" data-target="100">0</span>
+          <div class="stat-label">% Motivation</div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Colonne droite : texte + identité -->
+    <div class="about-text-col reveal">
+
+      <p class="about-intro">"Coder, c'est construire l'avenir — ligne par ligne."</p>
+
+      <p>
+        Je m'appelle <strong>NAMBINITSOA Tsiky Fanantenana</strong>, j'ai <em>19 ans</em> et je suis
+        étudiant en Licence 1 Informatique, spécialité <strong>DA2I</strong>
+        (Développement d'Applications d'Iternet et Intranet)
+        à l'<em>École de Management et d'Innovation Technologique (EMIT)</em>
+        de l'Université de Fianarantsoa, Madagascar.
+      </p>
+
+      <p>
+        En tant que <strong>développeur web junior</strong>, je m'investis chaque jour
+        dans l'apprentissage du développement front-end et back-end. HTML, CSS,
+        JavaScript, Python et C sont mes outils quotidiens. Je construis mes
+        compétences avec <strong>sérieux et discipline</strong>, convaincu que
+        chaque projet réalisé est une victoire.
+      </p>
+
+      <p>
+        Mon ambition : contribuer au <em>développement numérique de Madagascar</em>
+        et devenir un développeur full-stack reconnu. Je suis toujours ouvert aux
+        opportunités de stage, de collaboration ou simplement d'échange autour
+        de la technologie.
+      </p>
+
+      <!-- Identité complète -->
+      <div class="about-identity">
+        <div class="identity-item">
+          <span class="identity-key">👤 Nom</span>
+          <span class="identity-val">NAMBINITSOA Tsiky Fanantenana</span>
+        </div>
+        <div class="identity-item">
+          <span class="identity-key">🎂 Âge</span>
+          <span class="identity-val">19 ans</span>
+        </div>
+        <div class="identity-item">
+          <span class="identity-key">✉️ Email</span>
+          <span class="identity-val"><a href="mailto:tsikynamb@gmail.com">tsikynamb@gmail.com</a></span>
+        </div>
+        <div class="identity-item">
+          <span class="identity-key">📱 Téléphone</span>
+          <span class="identity-val">038 97 911 95 / 038 42 131 52</span>
+        </div>
+        <div class="identity-item">
+          <span class="identity-key">📘 Facebook</span>
+          <span class="identity-val">
+            <a href="https://facebook.com/NAMBINTSOA-Tsiky-Fanantenana" target="_blank">NAMBINTSOA Tsiky Fanantenana</a>
+          </span>
+        </div>
+        <div class="identity-item">
+          <span class="identity-key">🐙 GitHub</span>
+          <span class="identity-val">
+            <a href="https://github.com/Tsiky1801" target="_blank">@Tsiky1801</a>
+          </span>
+        </div>
+        <div class="identity-item">
+          <span class="identity-key">📍 Lieu</span>
+          <span class="identity-val">Fianarantsoa, Madagascar</span>
+        </div>
+      </div>
+
+      <!-- Bouton CV -->
+      <div style="margin-top: 1.5rem;">
+        <!--
+          INSTRUCTION : Pour activer le téléchargement du CV :
+          1. Mettez votre fichier CV dans le dossier (ex: "CV_Nambinitsoa.pdf")
+          2. Remplacez le href="tsiky.pdf" par href="CV_Nambinitsoa.pdf"
+          3. Décommentez l'attribut download ci-dessous
+        -->
+        <a href="tsiky.pdf"
+           class="btn-primary"
+           id="cv-btn-about"
+           <!-- download="CV_NAMBINITSOA_Tsiky_Fanantenana.pdf" -->
+        >
+          ⬇️ Télécharger mon CV
+        </a>
+      </div>
+
+    </div>
+  </div>
 </section>
 
-<section id="contact" class="section">
-    <h1 class="section-title">Contact</h1>
+<!-- ═══════════════ COMPÉTENCES ══════════════════════════ -->
+<section id="skills">
+  <div class="section-header reveal">
+    <div class="section-label">02 — Compétences</div>
+    <h2 class="section-title">Ce que je <span>maîtrise</span></h2>
+    <span class="section-line"></span>
+  </div>
 
-    <form>
-        <input type="text" placeholder="Votre Nom" required>
-        <input type="email" placeholder="Votre Email" required>
-        <textarea placeholder="Votre Message" rows="5" required></textarea>
-        <button type="submit">Envoyer</button>
+  <!-- Grille injectée par script.js -->
+  <div class="skills-grid" id="skills-grid"></div>
+</section>
+
+<!-- ═══════════════ PROJETS ══════════════════════════════ -->
+<section id="projects" style="background: var(--bg2); border-top: 1px solid var(--border);">
+  <div class="section-header reveal">
+    <div class="section-label">03 — Projets</div>
+    <h2 class="section-title">Mes <span>réalisations</span></h2>
+    <span class="section-line"></span>
+  </div>
+
+  <!-- Grille injectée par script.js -->
+  <div class="projects-grid" id="projects-grid"></div>
+</section>
+
+<!-- ═══════════════ TÉLÉCHARGER CV ═══════════════════════ -->
+<div class="cv-section reveal">
+  <div class="cv-text">
+    <h3>📄 Téléchargez mon CV complet</h3>
+    <p>Retrouvez toutes mes compétences, formations et expériences dans mon curriculum vitae détaillé.</p>
+  </div>
+  <!--
+    INSTRUCTION : Remplacez href="#" par le chemin de votre CV
+    Exemple : href="tsiky.pdf"
+    Et ajoutez : download="CV_NAMBINITSOA_Tsiky_Fanantenana.pdf"
+  -->
+  <a href="tsiky.pdf" class="btn-primary" style="font-size:0.9rem; padding: 1rem 2.5rem;">
+    ⬇ Télécharger le CV PDF
+  </a>
+</div>
+
+<!-- ═══════════════ CONTACT ══════════════════════════════ -->
+<section id="contact">
+  <div class="section-header reveal">
+    <div class="section-label">04 — Contact</div>
+    <h2 class="section-title">Me <span>contacter</span></h2>
+    <span class="section-line"></span>
+  </div>
+
+  <div class="contact-grid">
+
+    <!-- Infos de contact (injectées par script.js) -->
+    <div class="contact-info reveal">
+      <h3>Travaillons ensemble ! 🤝</h3>
+      <p>
+        Vous avez un projet, une question ou une opportunité de stage ?
+        Je suis disponible et prêt à échanger. N'hésitez pas à me contacter
+        via le formulaire ou directement par email ou téléphone.
+      </p>
+      <div class="contact-items" id="contact-info-items">
+        <!-- Injecté par script.js -->
+      </div>
+    </div>
+
+    <!-- Formulaire de contact -->
+    <form class="contact-form reveal" id="contact-form">
+      <div class="form-row">
+        <div class="form-group">
+          <label>Votre nom *</label>
+          <input type="text" name="nom" placeholder="RAHARIMALALA Henintsoa" required />
+        </div>
+        <div class="form-group">
+          <label>Votre email *</label>
+          <input type="email" name="email" placeholder="email@exemple.com" required />
+        </div>
+      </div>
+      <div class="form-group">
+        <label>Sujet *</label>
+        <input type="text" name="sujet" placeholder="ex: Proposition de stage, Collaboration..." required />
+      </div>
+      <div class="form-group">
+        <label>Message *</label>
+        <textarea name="message" rows="5" placeholder="Décrivez votre projet ou votre demande..." required></textarea>
+      </div>
+      <div class="form-success" id="form-success">
+        ✅ Votre message a bien été envoyé ! Je vous répondrai dans les plus brefs délais.
+      </div>
+      <button type="submit" class="btn-primary" style="border:none; width:100%; justify-content:center;">
+        Envoyer le message 🚀
+      </button>
     </form>
+
+  </div>
 </section>
 
+<!-- ═══════════════ FOOTER ════════════════════════════════ -->
+<footer>
+  <div class="footer-logo">NAMBS<span>.</span>dev</div>
+
+  <div class="footer-copy">
+    © 2026 <strong>NAMBININTSOA Tsiky Fanantenana</strong> — EMIT Fianarantsoa, Madagascar<br>
+    L1 Informatique · DA2I · Université de Fianarantsoa 
+                      MERCI DE VISITER!! GARDER LA PECHE
+  </div>
+
+  <div class="footer-socials">
+    <a href="https://github.com/Tsiky1801" class="footer-social" target="_blank" rel="noopener" title="GitHub">🐙</a>
+    <a href="https://facebook.com/NAMBINTSOA-Tsiky-Fanantenana" class="footer-social" target="_blank" rel="noopener" title="Facebook">📘</a>
+    <a href="mailto:tsikynamb@gmail.com" class="footer-social" title="Email">✉️</a>
+  </div>
+</footer>
+
+<!-- ═══════════════ SCRIPT ════════════════════════════════ -->
 <script src="script.js"></script>
+
 </body>
 </html>
