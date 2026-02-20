@@ -38,27 +38,62 @@
 <!-- ═══════════════ HERO ══════════════════════════════════ -->
 <section id="hero">
 
-  <!-- Gauche : texte -->
-  <div class="hero-left">
-    <div class="hero-badge">
-      <div class="badge-dot"></div>
-      Étudiant raisonable &amp; amoureux
+  <!-- Badge en haut -->
+  <div class="hero-badge" style="grid-column: 1/-1;">
+    <div class="badge-dot"></div>
+    Étudiant sérieux &amp; passionné
+  </div>
+
+  <!-- Bloc : photo + nom côte à côte -->
+  <div class="hero-name-row">
+
+    <!-- Photo de profil animée -->
+    <div class="hero-photo-inline">
+      <div class="profile-container">
+        <div class="profile-deco"></div>
+        <div class="ring-outer"></div>
+        <div class="ring-mid"></div>
+        <div class="ring-inner"></div>
+        <div class="profile-img-wrap" id="profile-img-wrap">
+          <!--
+            PHOTO DEPUIS GITHUB :
+            Remplacez NOM_DU_FICHIER par le vrai nom de votre image sur GitHub.
+            Exemple si votre dépôt s'appelle "reimagined-enigma" et la photo "photo.jpg" :
+            <img src="https://raw.githubusercontent.com/Tsiky1801/portfolio-tsikymain/photo.jpg" alt="Nambinitsoa" />
+
+            OU si la photo est directement dans un repo :
+            <img src="https://raw.githubusercontent.com/Tsiky1801/NOM_REPO/main/NOM_FICHIER.jpg" alt="Nambinitsoa" />
+
+            Pour l'instant un placeholder s'affiche :
+          -->
+          <div class="profile-placeholder">
+            <span class="ph-icon">🧑‍💻</span>
+            <p>Mettez votre photo</p>
+            <small>Voir instructions ci-dessous</small>
+          </div>
+        </div>
+        <div class="profile-badge">Dev Web Junior ✨</div>
+      </div>
     </div>
 
-    <p class="hero-greeting">Bonjour, je suis</p>
+    <!-- Nom + infos -->
+    <div class="hero-left">
+      <p class="hero-greeting">Bonjour, je suis</p>
+      <h1 class="hero-name">
+        <span class="highlight">NAMBINITSOA</span><br>
+        Tsiky Fanantenana
+      </h1>
+      <p class="hero-role">🚀 Développeur Web Junior</p>
+      <p class="hero-school">
+        <strong>EMIT — Université de Fianarantsoa</strong> &nbsp;|&nbsp;
+        L1 Informatique · DA2I
+      </p>
+    </div>
 
-    <h1 class="hero-name">
-      <span class="highlight">NAMBINITSOA</span><br>
-      Tsiky Fanantenana
-    </h1>
+  </div><!-- fin hero-name-row -->
 
-    <p class="hero-role"> Développeur Web Junior</p>
-
-    <p class="hero-school">
-      <strong>EMIT — Université de Fianarantsoa</strong> &nbsp;|&nbsp;
-      L1 Informatique · DA2I
-    </p>
-
+  <!-- Description + boutons en dessous -->
+  <div class="hero-bottom">
     <p class="hero-desc">
       Étudiant de 19 ans, <strong>passionné et sérieux</strong>, je consacre ma
       formation à maîtriser le développement web et les fondamentaux de l'informatique.
@@ -67,40 +102,19 @@
     </p>
 
     <div class="hero-btns">
-      <a href="#projects" class="btn-primary"> Voir mes projets</a>
+      <a href="#projects" class="btn-primary">🎯 Voir mes projets</a>
       <a href="#contact" class="btn-secondary">💬 Me contacter</a>
     </div>
 
-    <!-- Liens sociaux -->
     <div class="hero-socials">
       <a href="https://github.com/Tsiky1801" class="social-link" target="_blank" rel="noopener">
-        <!-- GitHub icon -->
-        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-          <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
-        </svg>
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
         GitHub @Tsiky1801
       </a>
       <a href="https://facebook.com/NAMBINTSOA-Tsiky-Fanantenana" class="social-link" target="_blank" rel="noopener">
-        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-          <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
-        </svg>
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
         Facebook
       </a>
-    </div>
-  </div>
-
-  <!-- Droite : photo de profil animée -->
-  <div class="hero-right">
-    <div class="profile-container">
-      <div class="profile-deco"></div>
-      <div class="ring-outer"></div>
-      <div class="ring-mid"></div>
-      <div class="ring-inner"></div>
-
-      <!-- La photo est injectée ici via script.js -->
-      <div class="photo.jpg" id="profil-photo"></div>
-
-      <div class="profile-badge">Dev Web Junior depuis le 2026</div>
     </div>
   </div>
 
@@ -121,7 +135,7 @@
 
       <!-- Photo de l'école -->
       <div class="about-school-card reveal">
-        <div class="EMIT.jpg" id="school-img">
+        <div class="EMIT.jpg" id="school-img-wrap">
           <!-- Injecté par script.js -->
         </div>
         <div class="school-info-bar">
@@ -141,7 +155,7 @@
           <div class="stat-label">Compétences</div>
         </div>
         <div class="stat-box">
-          <span class="stat-num" data-target="3">0</span>
+          <span class="stat-num" data-target="18">0</span>
           <div class="stat-label">Projets</div>
         </div>
         <div class="stat-box">
@@ -164,7 +178,7 @@
       <p>
         Je m'appelle <strong>NAMBINITSOA Tsiky Fanantenana</strong>, j'ai <em>19 ans</em> et je suis
         étudiant en Licence 1 Informatique, spécialité <strong>DA2I</strong>
-        (Développement d'Applications d'Iternet et Intranet)
+        (Développement d'Applications et Intelligence Informatique)
         à l'<em>École de Management et d'Innovation Technologique (EMIT)</em>
         de l'Université de Fianarantsoa, Madagascar.
       </p>
@@ -200,7 +214,7 @@
         </div>
         <div class="identity-item">
           <span class="identity-key">📱 Téléphone</span>
-          <span class="identity-val">038 97 911 95 / 038 42 131 52</span>
+          <span class="identity-val">038 979 11 95 / 038 421 31 52</span>
         </div>
         <div class="identity-item">
           <span class="identity-key">📘 Facebook</span>
@@ -225,7 +239,7 @@
         <!--
           INSTRUCTION : Pour activer le téléchargement du CV :
           1. Mettez votre fichier CV dans le dossier (ex: "CV_Nambinitsoa.pdf")
-          2. Remplacez le href="CV_Nambinitsoa.pdf" par href="tsiky.pdf"
+          2. Remplacez le href="#" par href="CV_Nambinitsoa.pdf"
           3. Décommentez l'attribut download ci-dessous
         -->
         <a href="tsiky.pdf"
@@ -273,7 +287,7 @@
   </div>
   <!--
     INSTRUCTION : Remplacez href="#" par le chemin de votre CV
-    Exemple : href="tsiky.pdf"
+    Exemple : href="CV_Nambinitsoa.pdf"
     Et ajoutez : download="CV_NAMBINITSOA_Tsiky_Fanantenana.pdf"
   -->
   <a href="tsiky.pdf" class="btn-primary" style="font-size:0.9rem; padding: 1rem 2.5rem;">
@@ -309,7 +323,7 @@
       <div class="form-row">
         <div class="form-group">
           <label>Votre nom *</label>
-          <input type="text" name="nom" placeholder="Jojo RAHARIMALALA " required />
+          <input type="text" name="nom" placeholder=" Jojo Raharimalala" required />
         </div>
         <div class="form-group">
           <label>Votre email *</label>
@@ -340,9 +354,8 @@
   <div class="footer-logo">NAMBS<span>.</span>dev</div>
 
   <div class="footer-copy">
-    © 2026 <strong>NAMBININTSOA Tsiky Fanantenana</strong> — EMIT Fianarantsoa, Madagascar<br>
-    L1 Informatique · DA2I · Université de Fianarantsoa 
-                      MERCI DE VISITER!! GARDER LA PECHE
+    © 2026 <strong>NAMBINITSOA Tsiky Fanantenana</strong> — EMIT Fianarantsoa, Madagascar<br>
+    L1 Informatique · DA2I · Université de Fianarantsoa
   </div>
 
   <div class="footer-socials">
