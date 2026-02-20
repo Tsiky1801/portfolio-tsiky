@@ -1,4 +1,4 @@
-/* ============================================================
+ /* ============================================================
    PORTFOLIO — NAMBINITSOA Tsiky Fanantenana
    Fichier : style.css
    Couleurs dominantes : Rouge #E31C25 + Bleu marine/ciel
@@ -150,13 +150,53 @@ nav a:hover::after { right: 0; }
 /* ── HERO ───────────────────────────────────────────────────── */
 #hero {
   min-height: 100vh;
-  display: grid;
-  grid-template-columns: 1fr 420px;
-  gap: 4rem;
-  align-items: center;
-  padding: 8rem 5rem 4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2.5rem;
+  padding: 8rem 5rem 5rem;
   position: relative;
   overflow: hidden;
+}
+
+/* Ligne photo + nom côte à côte */
+.hero-name-row {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+  flex-wrap: wrap;
+}
+
+/* Photo inline dans le hero */
+.hero-photo-inline {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: fadeUp 0.9s ease 0.3s both;
+}
+
+.hero-photo-inline .profile-container {
+  width: 200px;
+  height: 200px;
+}
+
+.hero-photo-inline .profile-badge {
+  font-size: 0.55rem;
+  padding: 0.3rem 0.65rem;
+  bottom: -8px;
+  right: -15px;
+}
+
+/* Partie texte nom */
+.hero-left {
+  flex: 1;
+  min-width: 260px;
+}
+
+/* Partie description + boutons */
+.hero-bottom {
+  max-width: 620px;
 }
 
 /* Fond décoratif */
@@ -1118,9 +1158,20 @@ footer {
 
 /* ── RESPONSIVE ─────────────────────────────────────────────── */
 @media (max-width: 1100px) {
-  #hero { grid-template-columns: 1fr; padding: 7rem 3rem 4rem; }
-  .hero-right { margin: 0 auto; }
-  .hero-terminal { display: none; }
+  #hero { padding: 7rem 3rem 4rem; }
+}
+
+@media (max-width: 700px) {
+  /* Sur mobile : photo AU-DESSUS du nom, centrée */
+  .hero-name-row {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 1.5rem;
+  }
+  .hero-bottom { text-align: center; }
+  .hero-socials { justify-content: center; }
+  .hero-photo-inline .profile-container { width: 160px; height: 160px; }
 }
 
 @media (max-width: 900px) {
